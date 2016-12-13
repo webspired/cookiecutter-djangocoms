@@ -8,6 +8,8 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
+from cms.sitemaps import CMSSitemap 
+
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
@@ -19,8 +21,13 @@ urlpatterns = [
     url(r'^users/', include('{{ cookiecutter.project_slug }}.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
 
+    # Django CMS 
+    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', 
+        {'sitemaps': {'cmspages': CMSSitemap}}), 
+    url(r'^select2/', include('django_select2.urls')), 
+    url(r'^cms/', include('cms.urls')), 
+ 
     # Your stuff: custom urls includes go here
-
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

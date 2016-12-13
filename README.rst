@@ -128,7 +128,6 @@ Answer the prompts with your own desired options_. For example::
     use_python3 [y]: y
     use_docker [y]: n
     use_heroku [n]: y
-    use_compressor [n]: y
     Select postgresql_version:
     1 - 9.5
     2 - 9.4

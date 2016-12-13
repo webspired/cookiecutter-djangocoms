@@ -1,0 +1,11 @@
+{% raw %}
+{% extends "base.html" %}
+{% load cms_tags staticfiles sekizai_tags menu_tags %}
+
+{% block navlinks %}
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'home' %}">Home</a>
+</li>
+{% show_menu 0 1 100 100 "cms/menu.html" %}
+{% endblock navlinks %}
+{% endraw %}
