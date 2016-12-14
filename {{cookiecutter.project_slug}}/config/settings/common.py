@@ -298,10 +298,11 @@ TEMPLATES[0]['OPTIONS']['context_processors'].extend([
     'aldryn_boilerplates.context_processors.boilerplate'
 ])
 
-TEMPLATES[0]['OPTIONS']['loaders'].insert(
-    TEMPLATES[0]['OPTIONS']['loaders'].index('django.template.loaders.app_directories.Loader'),
-    'aldryn_boilerplates.template_loaders.AppDirectoriesLoader',
-)
+# AppDirectoriesLoader breaks with apps that us the new style app config (ticket opened with aldryn_boilerplates)
+#TEMPLATES[0]['OPTIONS']['loaders'].insert(
+#    TEMPLATES[0]['OPTIONS']['loaders'].index('django.template.loaders.app_directories.Loader'),
+#    'aldryn_boilerplates.template_loaders.AppDirectoriesLoader',
+#)
 
 STATICFILES_FINDERS.insert(
     STATICFILES_FINDERS.index('django.contrib.staticfiles.finders.AppDirectoriesFinder'),
