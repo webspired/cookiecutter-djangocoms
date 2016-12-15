@@ -14,7 +14,9 @@ Production Configurations
 """
 from __future__ import absolute_import, unicode_literals
 
+{% if cookiecutter.use_uwsgi_static != 'y' -%}
 from boto.s3.connection import OrdinaryCallingFormat
+{%- endif %}
 from django.utils import six
 {% if cookiecutter.use_sentry_for_error_reporting == 'y' %}
 import logging
@@ -88,9 +90,11 @@ X_FRAME_OPTIONS = 'DENY'
 ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['{{cookiecutter.domain_name}}'])
 # END SITE CONFIGURATION
 
+{% if cookiecutter.application_server == 'gunicorn' -%}
 INSTALLED_APPS += ('gunicorn', )
+{%- endif %}
 
-
+{% if cookiecutter.use_uwsgi_static != 'y' -%}
 # STORAGE CONFIGURATION
 # ------------------------------------------------------------------------------
 # Uploaded Media Files
@@ -145,6 +149,8 @@ STATICFILES_STORAGE = 'config.settings.production.StaticRootS3BotoStorage'
 AWS_PRELOAD_METADATA = True
 INSTALLED_APPS = ('collectfast', ) + INSTALLED_APPS
 {%- endif %}
+{%- endif %}
+
 {% if cookiecutter.use_compressor == 'y'-%}
 # COMPRESSOR
 # ------------------------------------------------------------------------------
