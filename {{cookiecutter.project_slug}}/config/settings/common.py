@@ -46,7 +46,7 @@ THIRD_PARTY_APPS = [
 # Apps specific for this project go here.
 LOCAL_APPS = [
     # custom users app
-    '{{ cookiecutter.project_slug }}.users.apps.UsersConfig',
+    '{{ cookiecutter.project_slug }}.users',
     # Your stuff: custom apps go here
 ]
 
@@ -298,11 +298,10 @@ TEMPLATES[0]['OPTIONS']['context_processors'].extend([
     'aldryn_boilerplates.context_processors.boilerplate'
 ])
 
-# AppDirectoriesLoader breaks with apps that us the new style app config (ticket opened with aldryn_boilerplates)
-#TEMPLATES[0]['OPTIONS']['loaders'].insert(
-#    TEMPLATES[0]['OPTIONS']['loaders'].index('django.template.loaders.app_directories.Loader'),
-#    'aldryn_boilerplates.template_loaders.AppDirectoriesLoader',
-#)
+TEMPLATES[0]['OPTIONS']['loaders'].insert(
+    TEMPLATES[0]['OPTIONS']['loaders'].index('django.template.loaders.app_directories.Loader'),
+    'aldryn_boilerplates.template_loaders.AppDirectoriesLoader',
+)
 
 STATICFILES_FINDERS.insert(
     STATICFILES_FINDERS.index('django.contrib.staticfiles.finders.AppDirectoriesFinder'),
