@@ -16,7 +16,7 @@ Settings
 
 Moved to settings_.
 
-.. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
+.. _settings: http://cookiecutter-django-webspired.readthedocs.io/en/latest/settings.html
 
 Basic Commands
 --------------
@@ -53,7 +53,7 @@ Live reloading and Sass CSS compilation
 
 Moved to `Live reloading and SASS compilation`_.
 
-.. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
+.. _`Live reloading and SASS compilation`: http://cookiecutter-django-webspired.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
 
 {% if cookiecutter.use_celery == "y" %}
 
@@ -124,7 +124,7 @@ Heroku
 
 See detailed `cookiecutter-django Heroku documentation`_.
 
-.. _`cookiecutter-django Heroku documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-on-heroku.html
+.. _`cookiecutter-django Heroku documentation`: http://cookiecutter-django-webspired.readthedocs.io/en/latest/deployment-on-heroku.html
 {% endif %}
 {% if cookiecutter.use_docker.lower() == "y" %}
 
@@ -133,7 +133,7 @@ Docker
 
 See detailed `cookiecutter-django Docker documentation`_.
 
-.. _`cookiecutter-django Docker documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html
+.. _`cookiecutter-django Docker documentation`: http://cookiecutter-django-webspired.readthedocs.io/en/latest/deployment-with-docker.html
 {% endif %}
 {% if cookiecutter.use_elasticbeanstalk_experimental.lower() == 'y' %}
 
@@ -142,6 +142,6 @@ Elastic Beanstalk
 
 See detailed `cookiecutter-django Elastic Beanstalk documentation`_.
 
-.. _`cookiecutter-django Docker documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-elastic-beanstalk.html
+.. _`cookiecutter-django Docker documentation`: http://cookiecutter-django-webspired.readthedocs.io/en/latest/deployment-with-elastic-beanstalk.html
 
 {% endif %}

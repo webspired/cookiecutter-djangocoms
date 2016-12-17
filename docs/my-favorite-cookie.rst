@@ -84,7 +84,7 @@ Change directories into the folder where you want your project to live, and run 
     my/project/folder  
     $ cookiecutter https://github.com/pydanny/cookiecutter-django
 
-This will prompt you for a bunch of values specific to your project. Press "enter" without typing anything to use the default values, which are shown in [brackets] after the question. You can learn about all the different options `here, <http://cookiecutter-django.readthedocs.io/en/latest/project-generation-options.html>`_ but for now we'll use the defaults for everything but your name, your email, the project's name, and the project's description.
+This will prompt you for a bunch of values specific to your project. Press "enter" without typing anything to use the default values, which are shown in [brackets] after the question. You can learn about all the different options `here, <http://cookiecutter-django-webspired.readthedocs.io/en/latest/project-generation-options.html>`_ but for now we'll use the defaults for everything but your name, your email, the project's name, and the project's description.
 
 .. code-block:: python
 

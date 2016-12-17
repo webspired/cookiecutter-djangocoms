@@ -14,12 +14,12 @@ Cookiecutter Django
 
 Powered by Cookiecutter_, Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly.
 
-* Documentation: https://cookiecutter-django.readthedocs.io/en/latest/
+* Documentation: http://cookiecutter-django-webspired.readthedocs.io/en/latest/
 * See Troubleshooting_ for common errors and obstacles
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 
-.. _Troubleshooting: https://cookiecutter-django.readthedocs.io/en/latest/troubleshooting.html
+.. _Troubleshooting: http://cookiecutter-django-webspired.readthedocs.io/en/latest/troubleshooting.html
 
 .. _528: https://github.com/pydanny/cookiecutter-django/issues/528#issuecomment-212650373
 
@@ -171,9 +171,9 @@ For local development, see the following:
 * `Developing locally`_
 * `Developing locally using docker`_
 
-.. _options: http://cookiecutter-django.readthedocs.io/en/latest/project-generation-options.html
-.. _`Developing locally`: http://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html
-.. _`Developing locally using docker`: http://cookiecutter-django.readthedocs.io/en/latest/developing-locally-docker.html
+.. _options: http://cookiecutter-django-webspired.readthedocs.io/en/latest/project-generation-options.html
+.. _`Developing locally`: http://cookiecutter-django-webspired.readthedocs.io/en/latest/developing-locally.html
+.. _`Developing locally using docker`: http://cookiecutter-django-webspired.readthedocs.io/en/latest/developing-locally-docker.html
 
 Community
 -----------

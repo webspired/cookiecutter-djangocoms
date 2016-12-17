@@ -73,4 +73,4 @@ In production basic email configuration is setup to send emails with Mailgun_
 
 If you’d like to take advantage of live reloading and Sass / Compass CSS compilation you can do so with a little bit of `prep work`_.
 
-.. _prep work: https://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
+.. _prep work: http://cookiecutter-django-webspired.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
