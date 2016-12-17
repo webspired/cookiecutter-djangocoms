@@ -1,27 +1,43 @@
 Cookiecutter Django
 =======================
 
-.. image:: https://pyup.io/repos/github/pydanny/cookiecutter-django/shield.svg
-     :target: https://pyup.io/repos/github/pydanny/cookiecutter-django/
+.. image:: https://pyup.io/repos/github/webspired/cookiecutter-django-webspired/shield.svg
+     :target: https://pyup.io/repos/github/webspired/cookiecutter-django-webspired/
      :alt: Updates
 
-.. image:: https://travis-ci.org/pydanny/cookiecutter-django.svg?branch=master
-     :target: https://travis-ci.org/pydanny/cookiecutter-django?branch=master
+.. image:: https://travis-ci.org/webspired/cookiecutter-django-webspired.svg?branch=master
+     :target: https://travis-ci.org/webspired/cookiecutter-django-webspired?branch=master
      :alt: Build Status
 
-.. image:: https://badges.gitter.im/Join Chat.svg
-   :target: https://gitter.im/pydanny/cookiecutter-django?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-
-Powered by Cookiecutter_, Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly.
+Powered by Cookiecutter_, Cookiecutter Django Webspired is a framework for jumpstarting production-ready Django projects quickly.
+It is based and forked of the famous `Cookiecutter Django`_ framework.
 
 * Documentation: http://cookiecutter-django-webspired.readthedocs.io/en/latest/
 * See Troubleshooting_ for common errors and obstacles
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 
+.. _`Cookiecutter Django`: https://github.com/pydanny/cookiecutter-django
+
 .. _Troubleshooting: http://cookiecutter-django-webspired.readthedocs.io/en/latest/troubleshooting.html
 
 .. _528: https://github.com/pydanny/cookiecutter-django/issues/528#issuecomment-212650373
+
+
+Why oh why not `Cookiecutter Django`_
+-------------------------------------
+
+`Cookiecutter Django`_ is a great project and thanks a lot for all the great work by the team.
+I will try to keep this project in sync with `Cookiecutter Django`_ as much as
+possible. All differences will be documented.
+
+The following features are only available in Cookiecutter Django Webspired:
+
+* uWsgi as application server (to be available soon)
+* uWsgi as static file server (to be available soon)
+* eventually more to come.
+
+.._`Cookiecutter Django`: https://github.com/pydanny/cookiecutter-django
 
 Features
 ---------

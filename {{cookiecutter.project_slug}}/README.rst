@@ -4,8 +4,8 @@
 {{cookiecutter.description}}
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
-     :target: https://github.com/pydanny/cookiecutter-django/
-     :alt: Built with Cookiecutter Django
+     :target: https://github.com/webspired/cookiecutter-django-webspired/
+     :alt: Built with Cookiecutter Django Webspired
 {% if cookiecutter.open_source_license != "Not open source" %}
 
 :License: {{cookiecutter.open_source_license}}
