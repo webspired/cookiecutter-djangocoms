@@ -30,7 +30,6 @@ from .common import *  # noqa
 # Raises ImproperlyConfigured exception if DJANGO_SECRET_KEY not in os.environ
 SECRET_KEY = env('DJANGO_SECRET_KEY')
 
-
 # This ensures that Django will be able to detect a secure connection
 # properly on Heroku.
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -39,16 +38,19 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # raven sentry client
 # See https://docs.sentry.io/clients/python/integrations/django/
 INSTALLED_APPS += ('raven.contrib.django.raven_compat', )
+
 {% endif %}
 {%- if cookiecutter.use_whitenoise == 'y' %}
 # Use Whitenoise to serve static files
 # See: https://whitenoise.readthedocs.io/
 WHITENOISE_MIDDLEWARE = ('whitenoise.middleware.WhiteNoiseMiddleware', )
 MIDDLEWARE = WHITENOISE_MIDDLEWARE + MIDDLEWARE
+
 {% endif %}
 {%- if cookiecutter.use_sentry_for_error_reporting == 'y' -%}
 RAVEN_MIDDLEWARE = ('raven.contrib.django.raven_compat.middleware.SentryResponseErrorIdMiddleware', )
 MIDDLEWARE = RAVEN_MIDDLEWARE + MIDDLEWARE
+
 {% endif %}
 {%- if cookiecutter.use_opbeat == 'y' -%}
 # opbeat integration
@@ -62,8 +64,8 @@ OPBEAT = {
 MIDDLEWARE = (
     'opbeat.contrib.django.middleware.OpbeatAPMMiddleware',
 ) + MIDDLEWARE
-{% endif %}
 
+{% endif %}
 # SECURITY CONFIGURATION
 # ------------------------------------------------------------------------------
 # See https://docs.djangoproject.com/en/1.9/ref/middleware/#module-django.middleware.security
@@ -92,8 +94,8 @@ ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['{{cookiecutter.domain
 
 {% if cookiecutter.application_server == 'gunicorn' -%}
 INSTALLED_APPS += ('gunicorn', )
-{%- endif %}
 
+{%- endif %}
 {% if cookiecutter.use_uwsgi_static != 'y' -%}
 # STORAGE CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -149,14 +151,15 @@ STATICFILES_STORAGE = 'config.settings.production.StaticRootS3BotoStorage'
 AWS_PRELOAD_METADATA = True
 INSTALLED_APPS = ('collectfast', ) + INSTALLED_APPS
 {%- endif %}
-{%- endif %}
 
+{%- endif %}
 {% if cookiecutter.use_compressor == 'y'-%}
 # COMPRESSOR
 # ------------------------------------------------------------------------------
 COMPRESS_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 COMPRESS_URL = STATIC_URL
 COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=True)
+
 {%- endif %}
 # EMAIL
 # ------------------------------------------------------------------------------
