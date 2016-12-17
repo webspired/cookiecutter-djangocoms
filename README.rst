@@ -37,7 +37,7 @@ The following features are only available in Cookiecutter Django Webspired:
 * uWsgi as static file server (to be available soon)
 * eventually more to come.
 
-.._`Cookiecutter Django`: https://github.com/pydanny/cookiecutter-django
+.. _`Cookiecutter Django`: https://github.com/pydanny/cookiecutter-django
 
 Features
 ---------
@@ -223,20 +223,12 @@ Not Exactly What You Want?
 
 This is what I want. *It might not be what you want.* Don't worry, you have options:
 
-Fork This
-~~~~~~~~~~
+Check with Cookiecutter Django
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have differences in your preferred setup, I encourage you to fork this to create your own version.
-Once you have your fork working, let me know and I'll add it to a '*Similar Cookiecutter Templates*' list here.
-It's up to you whether or not to rename your fork.
+Check with the original project at Cookiecutter Django. Maybe your featur is available there,
+or they are interested in your feature.
 
-If you do rename your fork, I encourage you to submit it to the following places:
-
-* cookiecutter_ so it gets listed in the README as a template.
-* The cookiecutter grid_ on Django Packages.
-
-.. _cookiecutter: https://github.com/audreyr/cookiecutter
-.. _grid: https://www.djangopackages.com/grids/g/cookiecutters/
 
 Submit a Pull Request
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -266,16 +258,5 @@ Code of Conduct
 
 Everyone interacting in the Cookiecutter project's codebases, issue trackers, chat
 rooms, and mailing lists is expected to follow the `PyPA Code of Conduct`_.
-
-Support This Project
----------------------------
-
-This project is maintained by volunteers. Support their efforts by spreading the word about:
-
-.. image:: https://s3.amazonaws.com/tsacademy/images/tsa-logo-250x60-transparent-01.png
-   :name: Two Scoops Academy
-   :align: center
-   :alt: Two Scoops Academy
-   :target: https://twoscoops.academy/
 
 .. _`PyPA Code of Conduct`: https://www.pypa.io/en/latest/code-of-conduct/
