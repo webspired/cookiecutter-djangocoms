@@ -27,6 +27,14 @@ version [0.1.0]
 timezone [UTC]
     Used in the common settings file for the `TIME_ZONE` value.
 
+application_server [gunicorn]
+    Which application server would you like to use? Either gunicorn or `uWsgi`_.
+    Attention: if you choose uWsgi without using Docker, you will need to install, run and monitor uWsgi on your platform, checkout the details in Docs for more information.
+
+use_uwsgi_static [n]
+    If you have opted for uWsgi, you can deliver your static assets via uWsgi as well.
+    Attention: if you choose this option, static file delivery via AWS S3 will be disabled.
+
 use_whitenoise [y]
     Whether to use WhiteNoise_ for static file serving.
 
@@ -92,6 +100,7 @@ open_source_license [1]
 **NOTE:** *If you choose to use Docker, selecting a JavaScript task runner is
 not supported out of the box.*
 
+.. _`uWsgi`: http://uwsgi-docs.readthedocs.io/en/latest
 .. _WhiteNoise: https://github.com/evansd/whitenoise
 .. _Celery: https://github.com/celery/celery
 .. _MailHog: https://github.com/mailhog/MailHog
