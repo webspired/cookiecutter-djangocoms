@@ -1,6 +1,23 @@
 Contributors
 ============
 
+Listed in alphabetical order.
+
+========================== ============================ ==============
+  Name                     Github                        Twitter
+========================== ============================ ==============
+Juergen Schackmann         `@schacki`_
+
+
+.. _@schacki: https://github.com/schacki
+
+
+Contributors to the original project cookiecutter-django
+========================================================
+
+This project has been forked from https://github.com/pydanny/cookiecutter-django originally
+including all its code and goodies.
+
 Core Developers
 ---------------
 

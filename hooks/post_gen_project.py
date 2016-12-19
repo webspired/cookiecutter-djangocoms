@@ -198,6 +198,25 @@ def remove_elasticbeanstalk():
             PROJECT_DIRECTORY, filename
         ))
 
+def remove_uwsgi():
+    '''
+    Removews uWsgi Files
+    '''
+    os.remove(
+        os.path.join(PROJECT_DIRECTORY, 'compose', 'django', 'uwsgi.sh')
+    )
+    os.remove(
+        os.path.join(PROJECT_DIRECTORY, 'config', 'uwsgi.ini')
+    )
+
+def remove_gunicorn():
+    '''
+    Removews gunicorn Files
+    '''
+    os.remove(
+        os.path.join(PROJECT_DIRECTORY, 'compose', 'django', 'gunicorn.sh')
+    )
+
 # IN PROGRESS
 # def copy_doc_files(project_directory):
 #     cookiecutters_dir = DEFAULT_CONFIG['cookiecutters_dir']
@@ -280,3 +299,13 @@ if '{{ cookiecutter.open_source_license}}' != 'GPLv3':
 # 12. Remove Elastic Beanstalk files
 if '{{ cookiecutter.use_elasticbeanstalk_experimental }}'.lower() != 'y':
     remove_elasticbeanstalk()
+
+# 13. Remove uwsgi or gunicorn files
+if '{{ cookiecutter.application_server }}' != 'gunicorn':
+    remove_gunicorn()
+if '{{ cookiecutter.application_server }}' != 'uwsgi':
+    remove_uwsgi()
+
+# 14. Hint for running outside of Docker with uWsgi
+if '{{ cookiecutter.application_server }}'.lower() == 'uwsgi' and  '{{ cookiecutter.use_docker }}'.lower() != 'y':
+    print ('You have choosen to run uWsgi outside of a Docker container. Please be aware that you need to setup uWsgi yourself on your platform and call uWsgi with the included uwsgi.ini file at {{ cookiecutter.project_slug }}/config/uwsgi.ini. Please check and update the section "# Start of settings for running outside of docker" in the uwsgi.ini file.')

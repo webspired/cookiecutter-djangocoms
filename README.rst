@@ -1,27 +1,43 @@
 Cookiecutter Django
 =======================
 
-.. image:: https://pyup.io/repos/github/pydanny/cookiecutter-django/shield.svg
-     :target: https://pyup.io/repos/github/pydanny/cookiecutter-django/
+.. image:: https://pyup.io/repos/github/webspired/cookiecutter-django-webspired/shield.svg
+     :target: https://pyup.io/repos/github/webspired/cookiecutter-django-webspired/
      :alt: Updates
 
-.. image:: https://travis-ci.org/pydanny/cookiecutter-django.svg?branch=master
-     :target: https://travis-ci.org/pydanny/cookiecutter-django?branch=master
+.. image:: https://travis-ci.org/webspired/cookiecutter-django-webspired.svg?branch=master
+     :target: https://travis-ci.org/webspired/cookiecutter-django-webspired?branch=master
      :alt: Build Status
 
-.. image:: https://badges.gitter.im/Join Chat.svg
-   :target: https://gitter.im/pydanny/cookiecutter-django?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+Powered by Cookiecutter_, Cookiecutter Django Webspired is a framework for jumpstarting production-ready Django projects quickly.
+It is based and forked of the famous `Cookiecutter Django`_ framework.
 
-Powered by Cookiecutter_, Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly.
-
-* Documentation: https://cookiecutter-django.readthedocs.io/en/latest/
+* Documentation: http://cookiecutter-django-webspired.readthedocs.io/en/latest/
 * See Troubleshooting_ for common errors and obstacles
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 
-.. _Troubleshooting: https://cookiecutter-django.readthedocs.io/en/latest/troubleshooting.html
+.. _`Cookiecutter Django`: https://github.com/pydanny/cookiecutter-django
+
+.. _Troubleshooting: http://cookiecutter-django-webspired.readthedocs.io/en/latest/troubleshooting.html
 
 .. _528: https://github.com/pydanny/cookiecutter-django/issues/528#issuecomment-212650373
+
+
+Why oh why not `Cookiecutter Django`_
+-------------------------------------
+
+`Cookiecutter Django`_ is a great project and thanks a lot for all the great work by the team.
+I will try to keep this project in sync with `Cookiecutter Django`_ as much as
+possible. All differences will be documented.
+
+The following features are only available in Cookiecutter Django Webspired:
+
+* uWsgi as application server (to be available soon)
+* uWsgi as static file server (to be available soon)
+* eventually more to come.
+
+.. _`Cookiecutter Django`: https://github.com/pydanny/cookiecutter-django
 
 Features
 ---------
@@ -57,6 +73,7 @@ Optional Integrations
 * Integration with MailHog_ for local email testing
 * Integration with Sentry_ for error logging
 * Integration with Opbeat_ for performance monitoring
+* Integration with `uWsgi`_ as application server and static file server 
 
 .. _`alpha 4`: http://blog.getbootstrap.com/2016/09/05/bootstrap-4-alpha-4/
 .. _Bootstrap: https://github.com/twbs/bootstrap
@@ -74,7 +91,7 @@ Optional Integrations
 .. _docker-compose: https://github.com/docker/compose
 .. _Opbeat: https://opbeat.com/
 .. _PythonAnywhere: https://www.pythonanywhere.com/
-
+.. _`uWsgi`: http://uwsgi-docs.readthedocs.io/en/latest
 
 Constraints
 -----------
@@ -82,6 +99,7 @@ Constraints
 * Only maintained 3rd party libraries are used.
 * Uses PostgreSQL everywhere (9.2+)
 * Environment variables for configuration (This won't work with Apache/mod_wsgi).
+* uWsgi integration is only fully supported with a Docker setup; if you run it outside of Docker, you need to install und monitor uWsgi for your platform.
 
 
 Usage
@@ -118,7 +136,12 @@ Answer the prompts with your own desired options_. For example::
     domain_name [example.com]: myreddit.com
     version [0.1.0]: 0.0.1
     timezone [UTC]: America/Los_Angeles
-    use_whitenoise [y]: n
+    application_server
+    1 - gunicorn
+    2 - uwsgi
+    Choose from 1, 2 [1]: 2
+    use_uwsgi_static [y]: y
+    use_whitenoise [n]: n
     use_celery [n]: y
     use_mailhog [n]: n
     use_sentry_for_error_reporting [y]: y
@@ -126,7 +149,7 @@ Answer the prompts with your own desired options_. For example::
     use_pycharm [n]: y
     windows [n]: n
     use_python3 [y]: y
-    use_docker [y]: n
+    use_docker [y]: y
     use_heroku [n]: y
     use_compressor [n]: y
     Select postgresql_version:
@@ -171,9 +194,9 @@ For local development, see the following:
 * `Developing locally`_
 * `Developing locally using docker`_
 
-.. _options: http://cookiecutter-django.readthedocs.io/en/latest/project-generation-options.html
-.. _`Developing locally`: http://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html
-.. _`Developing locally using docker`: http://cookiecutter-django.readthedocs.io/en/latest/developing-locally-docker.html
+.. _options: http://cookiecutter-django-webspired.readthedocs.io/en/latest/project-generation-options.html
+.. _`Developing locally`: http://cookiecutter-django-webspired.readthedocs.io/en/latest/developing-locally.html
+.. _`Developing locally using docker`: http://cookiecutter-django-webspired.readthedocs.io/en/latest/developing-locally-docker.html
 
 Community
 -----------
@@ -207,20 +230,12 @@ Not Exactly What You Want?
 
 This is what I want. *It might not be what you want.* Don't worry, you have options:
 
-Fork This
-~~~~~~~~~~
+Check with Cookiecutter Django
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have differences in your preferred setup, I encourage you to fork this to create your own version.
-Once you have your fork working, let me know and I'll add it to a '*Similar Cookiecutter Templates*' list here.
-It's up to you whether or not to rename your fork.
+Check with the original project at Cookiecutter Django. Maybe your featur is available there,
+or they are interested in your feature.
 
-If you do rename your fork, I encourage you to submit it to the following places:
-
-* cookiecutter_ so it gets listed in the README as a template.
-* The cookiecutter grid_ on Django Packages.
-
-.. _cookiecutter: https://github.com/audreyr/cookiecutter
-.. _grid: https://www.djangopackages.com/grids/g/cookiecutters/
 
 Submit a Pull Request
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -250,16 +265,5 @@ Code of Conduct
 
 Everyone interacting in the Cookiecutter project's codebases, issue trackers, chat
 rooms, and mailing lists is expected to follow the `PyPA Code of Conduct`_.
-
-Support This Project
----------------------------
-
-This project is maintained by volunteers. Support their efforts by spreading the word about:
-
-.. image:: https://s3.amazonaws.com/tsacademy/images/tsa-logo-250x60-transparent-01.png
-   :name: Two Scoops Academy
-   :align: center
-   :alt: Two Scoops Academy
-   :target: https://twoscoops.academy/
 
 .. _`PyPA Code of Conduct`: https://www.pypa.io/en/latest/code-of-conduct/
