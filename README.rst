@@ -73,6 +73,7 @@ Optional Integrations
 * Integration with MailHog_ for local email testing
 * Integration with Sentry_ for error logging
 * Integration with Opbeat_ for performance monitoring
+* Integration with `uWsgi`_ as application server and static file server 
 
 .. _`alpha 4`: http://blog.getbootstrap.com/2016/09/05/bootstrap-4-alpha-4/
 .. _Bootstrap: https://github.com/twbs/bootstrap
@@ -90,7 +91,7 @@ Optional Integrations
 .. _docker-compose: https://github.com/docker/compose
 .. _Opbeat: https://opbeat.com/
 .. _PythonAnywhere: https://www.pythonanywhere.com/
-
+.. _`uWsgi`: http://uwsgi-docs.readthedocs.io/en/latest
 
 Constraints
 -----------
@@ -98,6 +99,7 @@ Constraints
 * Only maintained 3rd party libraries are used.
 * Uses PostgreSQL everywhere (9.2+)
 * Environment variables for configuration (This won't work with Apache/mod_wsgi).
+* uWsgi integration is only fully supported with a Docker setup; if you run it outside of Docker, you need to install und monitor uWsgi for your platform.
 
 
 Usage
@@ -134,7 +136,12 @@ Answer the prompts with your own desired options_. For example::
     domain_name [example.com]: myreddit.com
     version [0.1.0]: 0.0.1
     timezone [UTC]: America/Los_Angeles
-    use_whitenoise [y]: n
+    application_server
+    1 - gunicorn
+    2 - uwsgi
+    Choose from 1, 2 [1]: 2
+    use_uwsgi_static [y]: y
+    use_whitenoise [n]: n
     use_celery [n]: y
     use_mailhog [n]: n
     use_sentry_for_error_reporting [y]: y
@@ -142,7 +149,7 @@ Answer the prompts with your own desired options_. For example::
     use_pycharm [n]: y
     windows [n]: n
     use_python3 [y]: y
-    use_docker [y]: n
+    use_docker [y]: y
     use_heroku [n]: y
     use_compressor [n]: y
     Select postgresql_version:
