@@ -12,7 +12,8 @@ from __future__ import absolute_import, unicode_literals
 
 import environ
 
-gettext = lambda s: s 
+gettext = lambda s: s
+
 ROOT_DIR = environ.Path(__file__) - 3  # ({{ cookiecutter.project_slug }}/config/settings/common.py - 3 = {{ cookiecutter.project_slug }}/)
 APPS_DIR = ROOT_DIR.path('{{ cookiecutter.project_slug }}')
 
@@ -55,7 +56,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 # MIDDLEWARE CONFIGURATION
 # ------------------------------------------------------------------------------
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -284,8 +285,8 @@ INSTALLED_APPS.extend([
     'djangocms_video',
 ])
 
-MIDDLEWARE_CLASSES.insert(0, 'cms.middleware.utils.ApphookReloadMiddleware')
-MIDDLEWARE_CLASSES.extend([
+MIDDLEWARE.insert(0, 'cms.middleware.utils.ApphookReloadMiddleware')
+MIDDLEWARE.extend([
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',

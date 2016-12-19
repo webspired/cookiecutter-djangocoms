@@ -21,13 +21,13 @@ with open('README.rst') as readme_file:
     long_description = readme_file.read()
 
 setup(
-    name='cookiecutter-django',
+    name='cookiecutter-django-webspired',
     version=version,
     description='A Cookiecutter template for creating production-ready Django projects quickly.',
     long_description=long_description,
-    author='Daniel Roy Greenfeld',
-    author_email='pydanny@gmail.com',
-    url='https://github.com/pydanny/cookiecutter-django',
+    author='Juergen Schackmann',
+    author_email='juergen.schackmann@webspired.com',
+    url='https://github.com/webspired/cookiecutter-django-webspired',
     packages=[],
     license='BSD',
     zip_safe=False,

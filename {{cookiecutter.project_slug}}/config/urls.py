@@ -22,8 +22,8 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
 
     # Django CMS 
-    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', 
-        {'sitemaps': {'cmspages': CMSSitemap}}), 
+    # url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', 
+    #    {'sitemaps': {'cmspages': CMSSitemap}}), 
     url(r'^select2/', include('django_select2.urls')), 
     url(r'^cms/', include('cms.urls')), 
  

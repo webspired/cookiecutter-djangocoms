@@ -20,7 +20,7 @@ services:
     depends_on:
       - postgres
       - redis
-    command: /gunicorn.sh
+    command: /{{ cookiecutter.application_server }}.sh
     env_file: .env
 
   nginx:
