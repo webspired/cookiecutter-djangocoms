@@ -1,16 +1,17 @@
-Cookiecutter Django
+Cookiecutter Django CMS
 =======================
 
-.. image:: https://pyup.io/repos/github/webspired/cookiecutter-django-webspired/shield.svg
-     :target: https://pyup.io/repos/github/webspired/cookiecutter-django-webspired/
+.. image:: https://pyup.io/repos/github/webspired/cookiecutter-djangocms/shield.svg
+     :target: https://pyup.io/repos/github/webspired/cookiecutter-djangocms/
      :alt: Updates
 
-.. image:: https://travis-ci.org/webspired/cookiecutter-django-webspired.svg?branch=master
-     :target: https://travis-ci.org/webspired/cookiecutter-django-webspired?branch=master
+.. image:: https://travis-ci.org/webspired/cookiecutter-djangocms.svg?branch=master
+     :target: https://travis-ci.org/webspired/cookiecutter-djangocms?branch=master
      :alt: Build Status
 
-Powered by Cookiecutter_, Cookiecutter Django Webspired is a framework for jumpstarting production-ready Django projects quickly.
-It is based and forked of the famous `Cookiecutter Django`_ framework.
+Powered by Cookiecutter_ Cookiecutter Django CMS is a framework for jumpstarting
+production-ready Django projects quickly.
+It is based and forked of the famous `Cookiecutter Django`_ framework, and `Cookiecutter Django Webspired`_
 
 * Documentation: http://cookiecutter-django-webspired.readthedocs.io/en/latest/
 * See Troubleshooting_ for common errors and obstacles
@@ -19,30 +20,33 @@ It is based and forked of the famous `Cookiecutter Django`_ framework.
 
 .. _`Cookiecutter Django`: https://github.com/pydanny/cookiecutter-django
 
+.. _`Cookiecutter Django Webspired`: https://github.com/webspired/cookiecutter-django-webspired
+
 .. _Troubleshooting: http://cookiecutter-django-webspired.readthedocs.io/en/latest/troubleshooting.html
 
 .. _528: https://github.com/pydanny/cookiecutter-django/issues/528#issuecomment-212650373
 
 
-Why oh why not `Cookiecutter Django`_
--------------------------------------
+Why would you want to use Cookiecutter Django CMS
+-------------------------------------------------
 
-`Cookiecutter Django`_ is a great project and thanks a lot for all the great work by the team.
-I will try to keep this project in sync with `Cookiecutter Django`_ as much as
-possible. All differences will be documented.
+Cookiecutter Django CMS is a combination of: 
 
-The following features are only available in Cookiecutter Django Webspired:
+* `Cookiecutter Django Webspired`_ framework and the django-cms installer project.
+* `Cookiecutter Django`_ framework and
+* django-cms installer project.
 
-* uWsgi as application server (to be available soon)
-* uWsgi as static file server (to be available soon)
-* eventually more to come.
+It will provide you a fully featured Django project with a Django CMS setup at a mouse-click.
+* Django Best practices
+* Working CMS
+* Deployment Ready
 
 .. _`Cookiecutter Django`: https://github.com/pydanny/cookiecutter-django
 
 Features
 ---------
 
-* For Django 1.10
+* For Django 1.10 and Django CMS 3.4.1
 * Renders Django projects with 100% starting test coverage
 * Twitter Bootstrap_ v4.0.0 - `alpha 4`_ (`maintained Foundation fork`_ also available)
 * 12-Factor_ based settings via django-environ_
@@ -59,8 +63,6 @@ Features
 * Run tests with unittest or py.test
 * Customizable PostgreSQL version
 * Experimental support for Amazon Elastic Beanstalk
-
-.. _`maintained Foundation fork`: https://github.com/Parbhat/cookiecutter-django-foundation
 
 
 Optional Integrations
@@ -118,11 +120,11 @@ Now run it against this repo::
 
 You'll be prompted for some values. Provide them, then a Django project will be created for you.
 
-**Warning**: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.
+**Warning**: After this point, change 'Juergen  Schackmann', etc to your own information.
 
 Answer the prompts with your own desired options_. For example::
 
-    Cloning into 'cookiecutter-django'...
+    Cloning into 'cookiecutter-djangocms'...
     remote: Counting objects: 550, done.
     remote: Compressing objects: 100% (310/310), done.
     remote: Total 550 (delta 283), reused 479 (delta 222)
@@ -204,14 +206,9 @@ Community
 * If you think you found a bug or want to request a feature, please open an issue_.
 * For anything else, you can chat with us on `Gitter`_.
 
-.. _`Stack Overflow`: http://stackoverflow.com/questions/tagged/cookiecutter-django
-.. _`issue`: https://github.com/pydanny/cookiecutter-django/issues
-.. _`Gitter`: https://gitter.im/pydanny/cookiecutter-django?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+.. _`Stack Overflow`: http://stackoverflow.com/questions/tagged/cookiecutter-djangocms
+.. _`issue`: https://github.com/pydanny/cookiecutter-djangocms/issues
 
-For Readers of Two Scoops of Django 1.8
---------------------------------------------
-
-You may notice that some elements of this project do not exactly match what we describe in chapter 3. The reason for that is this project, amongst other things, serves as a test bed for trying out new ideas and concepts. Sometimes they work, sometimes they don't, but the end result is that it won't necessarily match precisely what is described in the book I co-authored.
 
 "Your Stuff"
 -------------
@@ -221,19 +218,13 @@ Scattered throughout the Python and HTML of this project are places marked with 
 Releases
 --------
 
-Need a stable release? You can find them at https://github.com/pydanny/cookiecutter-django/releases
+Need a stable release? You can find them at https://github.com/webspired/cookiecutter-djangocms/releases
 
 
 Not Exactly What You Want?
 ---------------------------
 
 This is what I want. *It might not be what you want.* Don't worry, you have options:
-
-Check with Cookiecutter Django
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Check with the original project at Cookiecutter Django. Maybe your featur is available there,
-or they are interested in your feature.
 
 
 Submit a Pull Request
