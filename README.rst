@@ -9,14 +9,10 @@ Cookiecutter Django CMS
      :target: https://travis-ci.org/webspired/cookiecutter-djangocms?branch=master
      :alt: Build Status
 
-<<<<<<< Updated upstream
-Powered by Cookiecutter_, Cookiecutter Django Webspired is a framework for jumpstarting production-ready Django projects quickly.
-It is based and forked of the famous `Cookiecutter Django`_ framework.
-=======
 Powered by Cookiecutter_, Cookiecutter Django CMS is a framework for jumpstarting
 production-ready Django CMS projects quickly.
 It is based and forked of the famous `Cookiecutter Django`_ framework, and `Cookiecutter Django Webspired`_.
->>>>>>> Stashed changes
+
 
 * Documentation: http://cookiecutter-django-webspired.readthedocs.io/en/latest/
 * See Troubleshooting_ for common errors and obstacles
@@ -37,13 +33,6 @@ Why would you want to use Cookiecutter Django CMS
 
 Cookiecutter Django CMS is a combination of: 
 
-<<<<<<< Updated upstream
-The following features are only available in Cookiecutter Django Webspired:
-
-* uWsgi as application server (to be available soon)
-* uWsgi as static file server (to be available soon)
-* eventually more to come.
-=======
 * `Cookiecutter Django Webspired`_ framework
 * Django Cms Installer project.
 * `Cookiecutter Django`_ framework and
@@ -53,7 +42,6 @@ It will provide you a fully featured Django project with a Django CMS setup at a
 * Working CMS based on the standard `Django CMS installer`_ and Django CMS LTS version
 * Deployment Ready
 * With an optional Docker setup
->>>>>>> Stashed changes
 
 .. _`Cookiecutter Django`: https://github.com/pydanny/cookiecutter-django
 .. _`Django CMS installer`: abc 
@@ -62,11 +50,7 @@ It will provide you a fully featured Django project with a Django CMS setup at a
 Features
 ---------
 
-<<<<<<< Updated upstream
-* For Django 1.10
-=======
 * For Django 1.10 and Django CMS 3.4
->>>>>>> Stashed changes
 * Renders Django projects with 100% starting test coverage
 * 12-Factor_ based settings via django-environ_
 * Optimized development and production settings
@@ -148,7 +132,6 @@ You'll be prompted for some values. Provide them, then a Django project will be 
 
 **Warning**: After this point, change 'Juergen  Schackmann', etc to your own information.
 
-<<<<<<< Updated upstream
 Answer the prompts with your own desired options_. For example::
 
     Cloning into 'cookiecutter-djangocms'...
@@ -222,11 +205,10 @@ For local development, see the following:
 * `Developing locally`_
 * `Developing locally using docker`_
 
-.. _options: http://cookiecutter-django-webspired.readthedocs.io/en/latest/project-generation-options.html
-.. _`Developing locally`: http://cookiecutter-django-webspired.readthedocs.io/en/latest/developing-locally.html
-.. _`Developing locally using docker`: http://cookiecutter-django-webspired.readthedocs.io/en/latest/developing-locally-docker.html
-=======
->>>>>>> Stashed changes
+.. _options: http://cookiecutter-djangocms.readthedocs.io/en/latest/project-generation-options.html
+.. _`Developing locally`: http://cookiecutter-djangocms.readthedocs.io/en/latest/developing-locally.html
+.. _`Developing locally using docker`: http://cookiecutter-djangocms.readthedocs.io/en/latest/developing-locally-docker.html
+
 
 Community
 -----------
@@ -234,24 +216,15 @@ Community
 * Have questions? **Before you ask questions anywhere else**, please post your question on `Stack Overflow`_ under the *cookiecutter-django* tag. We check there periodically for questions.
 * If you think you found a bug or want to request a feature, please open an issue_.
 
-<<<<<<< Updated upstream
-.. _`Stack Overflow`: http://stackoverflow.com/questions/tagged/cookiecutter-django
-.. _`issue`: https://github.com/pydanny/cookiecutter-django/issues
-.. _`Gitter`: https://gitter.im/pydanny/cookiecutter-django?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-
-For Readers of Two Scoops of Django 1.8
---------------------------------------------
-=======
 .. _`Stack Overflow`: http://stackoverflow.com/questions/tagged/cookiecutter-djangocms
 .. _`issue`: https://github.com/webspired/cookiecutter-djangocms/issues
->>>>>>> Stashed changes
+
 
 "Your Stuff"
 -------------
 
 Scattered throughout the Python and HTML of this project are places marked with "your stuff". This is where third-party libraries are to be integrated with your project.
 
-<<<<<<< Updated upstream
 Releases
 --------
 
@@ -286,8 +259,7 @@ Have a blog or online publication? Write about your cookiecutter-django tips and
 .. _`How to create a Django Application using Cookiecutter and Django 1.8`: https://www.swapps.io/blog/how-to-create-a-django-application-using-cookiecutter-and-django-1-8/
 .. _`Introduction to Cookiecutter-Django`: http://krzysztofzuraw.com/blog/2016/django-cookiecutter.html
 .. _`Django and GitLab - Running Continuous Integration and tests with your FREE account`: http://dezoito.github.io/2016/05/11/django-gitlab-continuous-integration-phantomjs.html
-=======
->>>>>>> Stashed changes
+
 
 Code of Conduct
 ---------------
