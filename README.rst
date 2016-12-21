@@ -9,9 +9,14 @@ Cookiecutter Django CMS
      :target: https://travis-ci.org/webspired/cookiecutter-djangocms?branch=master
      :alt: Build Status
 
-Powered by Cookiecutter_ Cookiecutter Django CMS is a framework for jumpstarting
-production-ready Django projects quickly.
-It is based and forked of the famous `Cookiecutter Django`_ framework, and `Cookiecutter Django Webspired`_
+<<<<<<< Updated upstream
+Powered by Cookiecutter_, Cookiecutter Django Webspired is a framework for jumpstarting production-ready Django projects quickly.
+It is based and forked of the famous `Cookiecutter Django`_ framework.
+=======
+Powered by Cookiecutter_, Cookiecutter Django CMS is a framework for jumpstarting
+production-ready Django CMS projects quickly.
+It is based and forked of the famous `Cookiecutter Django`_ framework, and `Cookiecutter Django Webspired`_.
+>>>>>>> Stashed changes
 
 * Documentation: http://cookiecutter-django-webspired.readthedocs.io/en/latest/
 * See Troubleshooting_ for common errors and obstacles
@@ -32,28 +37,41 @@ Why would you want to use Cookiecutter Django CMS
 
 Cookiecutter Django CMS is a combination of: 
 
-* `Cookiecutter Django Webspired`_ framework and the django-cms installer project.
+<<<<<<< Updated upstream
+The following features are only available in Cookiecutter Django Webspired:
+
+* uWsgi as application server (to be available soon)
+* uWsgi as static file server (to be available soon)
+* eventually more to come.
+=======
+* `Cookiecutter Django Webspired`_ framework
+* Django Cms Installer project.
 * `Cookiecutter Django`_ framework and
-* django-cms installer project.
 
 It will provide you a fully featured Django project with a Django CMS setup at a mouse-click.
 * Django Best practices
-* Working CMS
+* Working CMS based on the standard `Django CMS installer`_ and Django CMS LTS version
 * Deployment Ready
+* With an optional Docker setup
+>>>>>>> Stashed changes
 
 .. _`Cookiecutter Django`: https://github.com/pydanny/cookiecutter-django
+.. _`Django CMS installer`: abc 
+
 
 Features
 ---------
 
-* For Django 1.10 and Django CMS 3.4.1
+<<<<<<< Updated upstream
+* For Django 1.10
+=======
+* For Django 1.10 and Django CMS 3.4
+>>>>>>> Stashed changes
 * Renders Django projects with 100% starting test coverage
-* Twitter Bootstrap_ v4.0.0 - `alpha 4`_ (`maintained Foundation fork`_ also available)
 * 12-Factor_ based settings via django-environ_
 * Optimized development and production settings
 * Registration via django-allauth_
 * Comes with custom user model ready to go
-* Grunt build for compass and livereload
 * Send emails via Anymail_ (using Mailgun_ by default, but switchable)
 * Media storage using Amazon S3
 * Docker support using docker-compose_ for development and production
@@ -68,7 +86,15 @@ Features
 Optional Integrations
 ---------------------
 
-*These features can be enabled during initial project setup.*
+*These CMS  features can be enabled during initial project setup. (planned)*
+
+* Load a starting page with examples after installation (english language only). Choose "no" if you use a custom template set. (choices: yes, no) [default no]: yes
+* Install and configure reversion support (only for django CMS 3.2 and 3.3) (choices: yes, no) [default yes]: 
+* Activate CMS permission management (choices: yes, no) [default no]: yes
+* Use `Twitter Bootstrap`_ Theme (choices: yes, no) [default no]: yes
+* Languages to enable. Option can be provided multiple times, or as a comma separated list. Only language codes supported by Django can be used here. Example: en, fr-FR, it-IT: en, de-de
+
+*These general project/Django features can be enabled during initial project setup.*
 
 * Serve static files from Amazon S3 or Whitenoise_
 * Configuration for Celery_
@@ -77,8 +103,6 @@ Optional Integrations
 * Integration with Opbeat_ for performance monitoring
 * Integration with `uWsgi`_ as application server and static file server 
 
-.. _`alpha 4`: http://blog.getbootstrap.com/2016/09/05/bootstrap-4-alpha-4/
-.. _Bootstrap: https://github.com/twbs/bootstrap
 .. _django-environ: https://github.com/joke2k/django-environ
 .. _12-Factor: http://12factor.net/
 .. _django-allauth: https://github.com/pennersr/django-allauth
@@ -95,6 +119,7 @@ Optional Integrations
 .. _PythonAnywhere: https://www.pythonanywhere.com/
 .. _`uWsgi`: http://uwsgi-docs.readthedocs.io/en/latest
 
+
 Constraints
 -----------
 
@@ -102,6 +127,7 @@ Constraints
 * Uses PostgreSQL everywhere (9.2+)
 * Environment variables for configuration (This won't work with Apache/mod_wsgi).
 * uWsgi integration is only fully supported with a Docker setup; if you run it outside of Docker, you need to install und monitor uWsgi for your platform.
+* django-compressor has been removed since it does not support offline compression with Sekizai
 
 
 Usage
@@ -116,12 +142,13 @@ First, get Cookiecutter. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter https://github.com/pydanny/cookiecutter-django
+    $ cookiecutter https://github.com/pydanny/cookiecutter-djangocms
 
 You'll be prompted for some values. Provide them, then a Django project will be created for you.
 
 **Warning**: After this point, change 'Juergen  Schackmann', etc to your own information.
 
+<<<<<<< Updated upstream
 Answer the prompts with your own desired options_. For example::
 
     Cloning into 'cookiecutter-djangocms'...
@@ -198,23 +225,33 @@ For local development, see the following:
 .. _options: http://cookiecutter-django-webspired.readthedocs.io/en/latest/project-generation-options.html
 .. _`Developing locally`: http://cookiecutter-django-webspired.readthedocs.io/en/latest/developing-locally.html
 .. _`Developing locally using docker`: http://cookiecutter-django-webspired.readthedocs.io/en/latest/developing-locally-docker.html
+=======
+>>>>>>> Stashed changes
 
 Community
 -----------
 
 * Have questions? **Before you ask questions anywhere else**, please post your question on `Stack Overflow`_ under the *cookiecutter-django* tag. We check there periodically for questions.
 * If you think you found a bug or want to request a feature, please open an issue_.
-* For anything else, you can chat with us on `Gitter`_.
 
+<<<<<<< Updated upstream
+.. _`Stack Overflow`: http://stackoverflow.com/questions/tagged/cookiecutter-django
+.. _`issue`: https://github.com/pydanny/cookiecutter-django/issues
+.. _`Gitter`: https://gitter.im/pydanny/cookiecutter-django?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
+For Readers of Two Scoops of Django 1.8
+--------------------------------------------
+=======
 .. _`Stack Overflow`: http://stackoverflow.com/questions/tagged/cookiecutter-djangocms
-.. _`issue`: https://github.com/pydanny/cookiecutter-djangocms/issues
-
+.. _`issue`: https://github.com/webspired/cookiecutter-djangocms/issues
+>>>>>>> Stashed changes
 
 "Your Stuff"
 -------------
 
 Scattered throughout the Python and HTML of this project are places marked with "your stuff". This is where third-party libraries are to be integrated with your project.
 
+<<<<<<< Updated upstream
 Releases
 --------
 
@@ -249,6 +286,8 @@ Have a blog or online publication? Write about your cookiecutter-django tips and
 .. _`How to create a Django Application using Cookiecutter and Django 1.8`: https://www.swapps.io/blog/how-to-create-a-django-application-using-cookiecutter-and-django-1-8/
 .. _`Introduction to Cookiecutter-Django`: http://krzysztofzuraw.com/blog/2016/django-cookiecutter.html
 .. _`Django and GitLab - Running Continuous Integration and tests with your FREE account`: http://dezoito.github.io/2016/05/11/django-gitlab-continuous-integration-phantomjs.html
+=======
+>>>>>>> Stashed changes
 
 Code of Conduct
 ---------------
@@ -257,3 +296,13 @@ Everyone interacting in the Cookiecutter project's codebases, issue trackers, ch
 rooms, and mailing lists is expected to follow the `PyPA Code of Conduct`_.
 
 .. _`PyPA Code of Conduct`: https://www.pypa.io/en/latest/code-of-conduct/
+
+
+
+webspired
+Optional default time zone. Example: Europe/Rome [default Europe/Berlin]: 
+Activate Django timezone support (choices: yes, no) [default yes]: 
+Activate Django I18N / L10N setting; this is automatically activated if more than language is provided (choices: yes, no) [default yes]: 
+Database configuration (in URL format). Example: sqlite://localhost/project.db [default sqlite://localhost/project.db]:
+
+ 
