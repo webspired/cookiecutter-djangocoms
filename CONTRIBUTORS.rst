@@ -15,8 +15,8 @@ Juergen Schackmann         `@schacki`_
 Contributors to the original project cookiecutter-django
 ========================================================
 
-This project has been forked from https://github.com/pydanny/cookiecutter-django originally
-including all its code and goodies.
+This project has been forked from https://github.com/pydanny/cookiecutter-django originally and 
+https://github.com/webspired/cookiecutter-webspired including all its code and goodies.
 
 Core Developers
 ---------------

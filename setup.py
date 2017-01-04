@@ -8,9 +8,9 @@ try:
 except ImportError:
     from distutils.core import setup
 
-# Our version ALWAYS matches the version of Django we support
-# If Django has a new release, we branch, tag, then update this setting after the tag.
-version = '1.10.1'
+# Our version ALWAYS matches the version of Django cms we support
+# If Django CMS has a new release, we branch, tag, then update this setting after the tag.
+version = '3.4.1'
 
 if sys.argv[-1] == 'tag':
     os.system('git tag -a %s -m "version %s"' % (version, version))
@@ -21,13 +21,13 @@ with open('README.rst') as readme_file:
     long_description = readme_file.read()
 
 setup(
-    name='cookiecutter-django-webspired',
+    name='cookiecutter-djangocms',
     version=version,
-    description='A Cookiecutter template for creating production-ready Django projects quickly.',
+    description='A Cookiecutter template for creating production-ready Django CMS projects quickly.',
     long_description=long_description,
     author='Juergen Schackmann',
     author_email='juergen.schackmann@webspired.com',
-    url='https://github.com/webspired/cookiecutter-django-webspired',
+    url='https://github.com/webspired/cookiecutter-djangocms',
     packages=[],
     license='BSD',
     zip_safe=False,
