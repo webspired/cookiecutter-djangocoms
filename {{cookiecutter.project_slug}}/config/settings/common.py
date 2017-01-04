@@ -12,6 +12,8 @@ from __future__ import absolute_import, unicode_literals
 
 import environ
 
+gettext = lambda s: s
+
 ROOT_DIR = environ.Path(__file__) - 3  # ({{ cookiecutter.project_slug }}/config/settings/common.py - 3 = {{ cookiecutter.project_slug }}/)
 APPS_DIR = ROOT_DIR.path('{{ cookiecutter.project_slug }}')
 
@@ -45,7 +47,7 @@ THIRD_PARTY_APPS = [
 # Apps specific for this project go here.
 LOCAL_APPS = [
     # custom users app
-    '{{ cookiecutter.project_slug }}.users.apps.UsersConfig',
+    '{{ cookiecutter.project_slug }}.users',
     # Your stuff: custom apps go here
 ]
 
@@ -258,15 +260,86 @@ else:
 ########## END CELERY
 {% endif %}
 
-{%- if cookiecutter.use_compressor == 'y'-%}
-# django-compressor
-# ------------------------------------------------------------------------------
-INSTALLED_APPS += ['compressor']
-STATICFILES_FINDERS += ['compressor.finders.CompressorFinder']
-{%- endif %}
 
 # Location of root django.contrib.admin URL, use {% raw %}{% url 'admin:index' %}{% endraw %}
 ADMIN_URL = r'^admin/'
+
+
+# Django CMS settings
+# ------------------------------------------------------------------------------
+INSTALLED_APPS.insert(0, 'djangocms_admin_style')
+
+INSTALLED_APPS.extend([
+    'aldryn_boilerplates',
+    'cms',
+    'menus',
+    'sekizai',
+    'treebeard',
+    'djangocms_text_ckeditor',
+    'filer',
+    'easy_thumbnails',
+    'djangocms_column',
+    'djangocms_style',
+    'djangocms_snippet',
+    'djangocms_googlemap',
+    'djangocms_video',
+])
+
+MIDDLEWARE.insert(0, 'cms.middleware.utils.ApphookReloadMiddleware')
+MIDDLEWARE.extend([
+    'cms.middleware.user.CurrentUserMiddleware',
+    'cms.middleware.page.CurrentPageMiddleware',
+    'cms.middleware.toolbar.ToolbarMiddleware',
+    'cms.middleware.language.LanguageCookieMiddleware'
+])
+
+TEMPLATES[0]['OPTIONS']['context_processors'].extend([
+    'sekizai.context_processors.sekizai',
+	'cms.context_processors.cms_settings',
+    'aldryn_boilerplates.context_processors.boilerplate'
+])
+
+TEMPLATES[0]['OPTIONS']['loaders'].insert(
+    TEMPLATES[0]['OPTIONS']['loaders'].index('django.template.loaders.app_directories.Loader'),
+    'aldryn_boilerplates.template_loaders.AppDirectoriesLoader',
+)
+
+STATICFILES_FINDERS.insert(
+    STATICFILES_FINDERS.index('django.contrib.staticfiles.finders.AppDirectoriesFinder'),
+    'aldryn_boilerplates.staticfile_finders.AppDirectoriesFinder'
+)
+
+LANGUAGES = [
+    ## Customize this
+    ('en-us', gettext('en-us')),
+]
+
+CMS_LANGUAGES = {
+    1: [
+        {
+            'public': True,
+            'name': gettext('en-us'),
+            'code': 'en-us',
+            'redirect_on_fallback': True,
+            'hide_untranslated': False,
+        },
+    ],
+    'default': {
+        'public': True,
+        'redirect_on_fallback': True,
+        'hide_untranslated': False,
+    },
+}
+
+CMS_TEMPLATES = (
+    ## Customize this
+    ('cms/page.html', 'Page'),
+)
+
+CMS_PERMISSION = True
+
+CMS_PLACEHOLDER_CONF = {}
+
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
