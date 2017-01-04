@@ -13,7 +13,7 @@ use_whitenoise = '{{ cookiecutter.use_whitenoise }}'.lower()
 if use_uwsgi_static == 'y' and application_server != 'uwsgi':
     raise Exception('You can only use "use_uwsgi_static", if you use "uwsgi" as application_server')
 
-if use_uwsgi_static == use_whitenoise: 
+if use_uwsgi_static == use_whitenoise and use_uwsgi_static == 'y': 
     raise Exception("Whitenoise and uWsgi static file handling cannot be used at the same time")
 
 if elasticbeanstalk == 'y' and (heroku == 'y' or docker == 'y'):
